@@ -9,7 +9,7 @@ public class event_light : MonoBehaviour, Interface_TL_Events
     public GameObject lightEvent;
     public Material baseMaterial;
     public Material lightMaterial;
-    private float DebutEventTL = 10;
+    public float DebutEventTL = 10;
     public bool Periodique = true;
     public float Periode = 3;
     public float DureeEventTL = 3;
@@ -53,33 +53,31 @@ public class event_light : MonoBehaviour, Interface_TL_Events
 
     public bool isRandomizable_TL_Event()
     {
-        return false;// rien à faire ou pas prévu
+        return false;
     }
 
     public void pause_TL_Event()
     {
-        return;
+        lightEvent.gameObject.SetActive(true);
     }
     public void unpause_TL_Event()
     {
-        return;
+        lightEvent.gameObject.SetActive(false);
     }
     public void randomize_TL_Event()
     {
-        return; // rien à faire ou pas prévu
+        return;
     }
 
     public void restart_TL_Event()
     {
         lightEvent.gameObject.SetActive(false);
-        print("OFF");
     }
 
 
     public void start_TL_Event()
     {
         lightEvent.gameObject.SetActive(false);
-        print("OFF");
     }
 
     public void TL_ChronoArrete()

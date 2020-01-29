@@ -228,6 +228,7 @@ public class _MGR_TimeLine : MonoBehaviour
                 {
                     TimeLine.Add(new struct_evt_TL(Event.getStartTime_TL_Event() + periodic * nbRepet, TypeCdeEvent.PAUSE, Event));
                     TimeLine.Add(new struct_evt_TL(Event.getStartTime_TL_Event() + (Event.getDuration_TL_Event() + periodic) * nbRepet, TypeCdeEvent.UNPAUSE, Event));
+                    
                     index += Event.getStartTime_TL_Event() + Event.getDuration_TL_Event() + periodic;
                     nbRepet++;
                 }
